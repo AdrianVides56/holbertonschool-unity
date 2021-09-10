@@ -1,11 +1,12 @@
 using UnityEngine;
 
 public class TimerTrigger : MonoBehaviour
-{    public GameObject player, timeTrigger; 
- 
-    void Update()
+{    
+    public GameObject player, timeTrigger; 
+
+    void OnTriggerExit(Collider other)
     {
-        if (player.transform.position.x < -1f || player.transform.position.x > 1f)
+        if (other.CompareTag("Player"))
         {
             player.GetComponent<Timer>().enabled = true;
             timeTrigger.SetActive(false);

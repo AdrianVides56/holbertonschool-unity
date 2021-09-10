@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
     public Transform groundCheck;
-    public float groundDistance = 0.4f;
+    public float groundDistance = 0.1f;
     public LayerMask groundMask; // Sphere that collides with the ground
 
     public float speed = 6f;
@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     void Awake ()
     {
         inputMaster = new InputMaster();
-        Debug.Log(startPos);
     }
 
     private void OnEnable()
@@ -38,7 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask); // Checks if player is on the ground
         if (isGrounded && velocity.y < 0)
-            velocity.y = -2f;
+            velocity.y = -9.81f;
 
         Vector2 movement = inputMaster.Player.Move.ReadValue<Vector2>();
         Vector3 move = new Vector3(movement.x, 0f, movement.y).normalized;
@@ -57,8 +56,8 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < -40) // Reset position
         {
             controller.Move(new Vector3(-transform.position.x - 25f, 10, -transform.position.z));
-            controller.Move(new Vector3(25f, 60f, 0f));
-            velocity.y = -2f;
+            controller.Move(new Vector3(25f, 50f, 0f));
+            velocity.y = -9.81f;
         }
 
         velocity.y += gravity * Time.deltaTime;
