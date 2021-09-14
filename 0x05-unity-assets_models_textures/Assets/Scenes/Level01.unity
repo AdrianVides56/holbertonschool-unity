@@ -7943,7 +7943,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930600322}
   m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
-  m_LocalPosition: {x: 27.85, y: 2.5, z: 94.73}
+  m_LocalPosition: {x: 0, y: 2.5, z: -6.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1331887}
@@ -13169,7 +13169,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521933261}
-  m_LocalRotation: {x: 0.00196746, y: 0.0000000042473034, z: -6.8127565e-10, w: 0.9999981}
+  m_LocalRotation: {x: 0.00196746, y: -0.0000000042473034, z: 6.8127565e-10, w: 0.9999981}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13672,8 +13672,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565804771}
-  m_LocalRotation: {x: 0.08042035, y: 0.0000000042877217, z: -3.459078e-10, w: 0.996761}
-  m_LocalPosition: {x: 27.85, y: 2.5, z: 94.73}
+  m_LocalRotation: {x: 0.08042035, y: -0.0000000042877253, z: 3.459448e-10, w: 0.996761}
+  m_LocalPosition: {x: 0, y: 2.5, z: -6.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19330,7 +19330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3862890848808265034, guid: 57ad0f5e93320d943b6e7708bb649fa1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3862890848808265034, guid: 57ad0f5e93320d943b6e7708bb649fa1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19338,7 +19338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3862890848808265034, guid: 57ad0f5e93320d943b6e7708bb649fa1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 100.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3862890848808265034, guid: 57ad0f5e93320d943b6e7708bb649fa1, type: 3}
       propertyPath: m_LocalRotation.w
