@@ -8989,7 +8989,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069595814}
-  m_LocalRotation: {x: -0.016174296, y: 0.000000017560158, z: -0.0000000024908144, w: 0.99986917}
+  m_LocalRotation: {x: -0.016174296, y: -0.00000001756015, z: 0.0000000024908136, w: 0.99986917}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13765,7 +13765,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565804771}
-  m_LocalRotation: {x: 0.08042035, y: 0.0000000042877253, z: -3.459448e-10, w: 0.996761}
+  m_LocalRotation: {x: 0.08042035, y: 0.0000000042877217, z: -3.459078e-10, w: 0.996761}
   m_LocalPosition: {x: 0, y: 2.5, z: -6.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -19227,6 +19227,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2026708702122261308, guid: 5cceb6b10fe9911469e1fe18061e3531, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 288fc976f2edb314097530c0508f160f, type: 3}
     - target: {fileID: 6646223295520919690, guid: 5cceb6b10fe9911469e1fe18061e3531, type: 3}
       propertyPath: m_Name
       value: TimerCanvas
