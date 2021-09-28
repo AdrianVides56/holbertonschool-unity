@@ -2091,6 +2091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755b75c9e4a6ca744b98be69f18044eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yAxis: {fileID: 914359003}
 --- !u!1 &1927654731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,6 +2419,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1780368570}
     m_Modifications:
+    - target: {fileID: 2982386366239830029, guid: 1e11847c1869b0d4eb15324fa1782198, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982386366239830029, guid: 1e11847c1869b0d4eb15324fa1782198, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982386366239830029, guid: 1e11847c1869b0d4eb15324fa1782198, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1780368571}
+    - target: {fileID: 2982386366239830029, guid: 1e11847c1869b0d4eb15324fa1782198, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982386366239830029, guid: 1e11847c1869b0d4eb15324fa1782198, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982386366239830029, guid: 1e11847c1869b0d4eb15324fa1782198, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionsMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2982386366239830029, guid: 1e11847c1869b0d4eb15324fa1782198, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3121950415775004686, guid: 1e11847c1869b0d4eb15324fa1782198, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

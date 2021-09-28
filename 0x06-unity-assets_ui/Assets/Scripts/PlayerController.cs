@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,11 +10,11 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.1f;
     public LayerMask groundMask; // Sphere that collides with the ground
-
     public float speed = 6f;
     public float gravity = -19.62f;
     public float turnSmoothTime = 0.1f;
     public float jumpHeight = 3f;
+    public bool isInverted = false;
     float turnSmoothVelocity; // Smooth movement of the camera
     Vector3 velocity; // helps with gravity
     bool isGrounded; // Stores if the player is grounded
