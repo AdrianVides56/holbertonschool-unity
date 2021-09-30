@@ -57,9 +57,11 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.y < -40) // Reset position
         {
-            controller.Move(new Vector3(-transform.position.x - 25f, 10, -transform.position.z));
-            controller.Move(new Vector3(25f, 50f, 0f));
+            this.gameObject.GetComponent<CharacterController>().enabled = false;
+            this.gameObject.transform.position = new Vector3(0, 20, 0);
             velocity.y = -9.81f;
+            this.gameObject.GetComponent<CharacterController>().enabled = true;
+
         }
 
         velocity.y += gravity * Time.deltaTime;
