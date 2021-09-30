@@ -37,7 +37,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Cursor.visible = false;
+        if (PlayerPrefs.GetInt("paused") == 0)
+            Cursor.visible = false;
+        else
+            Cursor.visible = true;
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask); // Checks if player is on the ground
         if (isGrounded && velocity.y < 0)
             velocity.y = -9.81f;

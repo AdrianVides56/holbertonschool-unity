@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        Cursor.visible = true;
+        PlayerPrefs.SetInt("paused", 1);
         pauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Cursor.visible = false;
+        PlayerPrefs.SetInt("paused", 0);
         pauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
