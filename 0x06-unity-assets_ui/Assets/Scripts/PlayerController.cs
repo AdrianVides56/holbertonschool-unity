@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     Vector3 velocity; // helps with gravity
     bool isGrounded; // Stores if the player is grounded
     Vector3 startPos = new Vector3(0f, 20f, 0f);
+    int coins;
 
     void Awake ()
     {
@@ -63,9 +64,26 @@ public class PlayerController : MonoBehaviour
             this.gameObject.GetComponent<CharacterController>().enabled = true;
 
         }
+        if (coins == 8)
+        {
+            GameObject.Find("Plat (16)").transform.localScale = new Vector3 (4, 1, 1);
+            GameObject.Find("Instruction").GetComponent<TextMesh>().text = "Well done!";
+            GameObject.Find("TextPumpkin").SetActive(false);
+            coins++;
+        }
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime); // Jumps
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Coin"))
+        {
+            coins++;
+            Debug.Log(coins);
+            other.gameObject.SetActive(false);
+        }
     }
 
 }
