@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool isInverted = false;
     float turnSmoothVelocity; // Smooth movement of the camera
     Vector3 velocity; // helps with gravity
-    bool isGrounded; // Stores if the player is grounded
+    public bool isGrounded; // Stores if the player is grounded
     Vector3 startPos = new Vector3(0f, 20f, 0f);
     int coins;
 
