@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask; // Sphere that collides with the ground
     public float speed = 6f, gravity = -19.62f, turnSmoothTime = 0.1f, jumpHeight = 3f;
     public bool isInverted = false, isGrounded; // Stores if the player is grounded
-    public AudioSource grass;
+    public AudioSource grass, bgm;
     float turnSmoothVelocity; // Smooth movement of the camera
     Vector3 startPos = new Vector3(0f, 20f, 0f), velocity; // velocity helps with gravity;
     int coins;
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     void Awake ()
     {
         inputMaster = new InputMaster();
+        bgm.Play();
     }
 
     private void OnEnable()
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (PlayerPrefs.GetInt("paused") == 0)
+        if (PlayerPrefs.GetInt("paused") == 0 || Time.timeScale == 0)
             Cursor.visible = false;
         else
             Cursor.visible = true;
@@ -91,6 +92,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log(coins);
             other.gameObject.SetActive(false);
         }
+        if (other.name == "WinFlag")
+        {
+            bgm.Pause();
+            Cursor.visible = true;
+        }
     }
-
 }

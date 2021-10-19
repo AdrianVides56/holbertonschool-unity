@@ -17,8 +17,7 @@ public class CutsceneController : MonoBehaviour
             player.GetComponent<PlayerController>().enabled = true;
             timerCanvas.SetActive(true);
             mainCamera.SetActive(true);
-            this.gameObject.GetComponent<CutsceneController>().enabled = false;
-            this.gameObject.GetComponent<Camera>().enabled = false;
+            this.gameObject.SetActive(false);
         }
     }
 
