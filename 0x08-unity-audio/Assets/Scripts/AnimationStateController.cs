@@ -12,7 +12,6 @@ public class AnimationStateController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (inputMaster.Player.Move.ReadValue<Vector2>().magnitude >= 0.1f)
