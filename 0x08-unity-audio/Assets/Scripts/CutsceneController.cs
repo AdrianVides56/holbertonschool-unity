@@ -15,6 +15,7 @@ public class CutsceneController : MonoBehaviour
         if (transform.position == new Vector3(0, 2.5f, -6.25f))
         {
             player.GetComponent<PlayerController>().enabled = true;
+            player.GetComponent<AudioListener>().enabled = true;
             timerCanvas.SetActive(true);
             mainCamera.SetActive(true);
             this.gameObject.SetActive(false);
