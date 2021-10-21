@@ -804,12 +804,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557762640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 755b75c9e4a6ca744b98be69f18044eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   yAxis: {fileID: 0}
+  bgm: {fileID: 0}
+  sfx: {fileID: 0}
+  masterMixer: {fileID: 0}
+  paused: {fileID: 0}
+  normal: {fileID: 0}
 --- !u!224 &604299715 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7447861355460585789, guid: a661f5f54e1967647b001193a40ea563, type: 3}

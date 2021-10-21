@@ -162,7 +162,11 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 08de0aa95965c8c4b857a7049d50e944
+    name: volumeSFX
+  - guid: 9d9f637bfe059e248b0a01723d4e61c8
+    name: volumeBGM
   m_AudioMixerGroupViews:
   - guids:
     - 371491b27af97794dbead2ce462fe2e3
@@ -172,7 +176,7 @@ AudioMixerController:
     - 84c5b2db3c6993e4a844b097da8e0765
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: -7846130564262446664}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -183,7 +187,6 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 371491b27af97794dbead2ce462fe2e3
   m_Children:
-  - {fileID: -3166769946217810620}
   - {fileID: -2029855556023350587}
   - {fileID: 3255764242810675045}
   - {fileID: 6236973898733933585}
@@ -319,7 +322,8 @@ AudioMixerGroupController:
   m_Name: Ambience
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 84c5b2db3c6993e4a844b097da8e0765
-  m_Children: []
+  m_Children:
+  - {fileID: -3166769946217810620}
   m_Volume: 08de0aa95965c8c4b857a7049d50e944
   m_Pitch: be6032feac5a27343b2152332954b125
   m_Send: 00000000000000000000000000000000
