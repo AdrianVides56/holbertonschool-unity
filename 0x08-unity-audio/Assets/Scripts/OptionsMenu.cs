@@ -8,7 +8,7 @@ public class OptionsMenu : MonoBehaviour
     public Toggle yAxis;
     public Slider bgm, sfx;
     public AudioMixer masterMixer;
-    public AudioMixerSnapshot paused, normal;
+    public AudioMixerSnapshot normal;
     float bgmVolume = 1f, sfxVolume = 1f;
 
     void Start()
@@ -32,9 +32,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void Back()
     {
+        normal.TransitionTo(0);
         SceneManager.LoadScene(PlayerPrefs.GetString("previousScene"));
-        if (!PlayerPrefs.GetString("previousScene").Equals("MainMenu"))
-            paused.TransitionTo(0);
     }
 
     public void Apply()

@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5990825678813061081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065864305619590929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2667893904746521165}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: ButtonRollover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8711531174482582296
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +116,7 @@ GameObject:
   - component: {fileID: 8711531174518908842}
   - component: {fileID: 8711531174518908843}
   - component: {fileID: 8711531174518908844}
+  - component: {fileID: 2667893904746521165}
   m_Layer: 5
   m_Name: PauseCanvas
   m_TagString: Untagged
@@ -111,6 +141,7 @@ RectTransform:
   - {fileID: 8711531175733363830}
   - {fileID: 3065864305619590928}
   - {fileID: 8711531176217451353}
+  - {fileID: 2516419751581592542}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -180,6 +211,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2667893904746521165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711531174518908845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a048c700e766ec46a23a19e88d02cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollover: {fileID: 2516419751555454962}
+  click: {fileID: 2516419751426968791}
 --- !u!1 &8711531174720403132
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +553,7 @@ GameObject:
   - component: {fileID: 8711531175733363827}
   - component: {fileID: 8711531175733363828}
   - component: {fileID: 8711531175733363829}
+  - component: {fileID: 8860392415860846636}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -617,9 +663,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: MainMenu
+      - m_Target: {fileID: 2667893904746521165}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -629,6 +675,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8860392415860846636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711531175733363831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2667893904746521165}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: ButtonRollover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8711531175832743658
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +716,7 @@ GameObject:
   - component: {fileID: 8711531175832743654}
   - component: {fileID: 8711531175832743655}
   - component: {fileID: 8711531175832743656}
+  - component: {fileID: 6931269437311796670}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -750,9 +826,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 2667893904746521165}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -762,6 +838,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6931269437311796670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711531175832743658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2667893904746521165}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: ButtonRollover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &8711531176048680489
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +955,7 @@ GameObject:
   - component: {fileID: 8711531176217451350}
   - component: {fileID: 8711531176217451351}
   - component: {fileID: 8711531176217451352}
+  - component: {fileID: 1815104535151835887}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -959,9 +1065,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Resume
+      - m_Target: {fileID: 2667893904746521165}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -971,6 +1077,107 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1815104535151835887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711531176217451354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2667893904746521165}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: ButtonRollover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1001 &1535702956770189733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8711531174518908841}
+    m_Modifications:
+    - target: {fileID: 4009320624332851834, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_Name
+      value: MenuSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 587
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 342
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+--- !u!4 &2516419751581592542 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+  m_PrefabInstance: {fileID: 1535702956770189733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2516419751555454962 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4009320624398841431, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+  m_PrefabInstance: {fileID: 1535702956770189733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2516419751426968791 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4009320624254692722, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+  m_PrefabInstance: {fileID: 1535702956770189733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8711531174502305361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1087,16 +1294,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5938471257496539458, guid: 9489234333c9be849857dcdc155182c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2667893904746521165}
+    - target: {fileID: 5938471257496539458, guid: 9489234333c9be849857dcdc155182c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5938471257496539458, guid: 9489234333c9be849857dcdc155182c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Options
+      value: ButtonClick
       objectReference: {fileID: 0}
     - target: {fileID: 5938471257496539458, guid: 9489234333c9be849857dcdc155182c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, Assembly-CSharp
+      value: AudioManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5938471257496539458, guid: 9489234333c9be849857dcdc155182c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1104,6 +1315,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9489234333c9be849857dcdc155182c3, type: 3}
+--- !u!1 &3065864305619590929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5938471257496539456, guid: 9489234333c9be849857dcdc155182c3, type: 3}
+  m_PrefabInstance: {fileID: 8711531174502305361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3065864305619590928 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5938471257496539457, guid: 9489234333c9be849857dcdc155182c3, type: 3}

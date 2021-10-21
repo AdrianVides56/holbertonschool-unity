@@ -3,11 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    void Start()
-    {
-        PlayerPrefs.SetFloat("bgmVolume", 1f);
-        PlayerPrefs.SetFloat("sfxVolume", 1f);
-    }
     void Update()
     {
         Cursor.visible = true;
