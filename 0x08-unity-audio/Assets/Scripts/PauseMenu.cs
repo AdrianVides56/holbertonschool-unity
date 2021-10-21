@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseCanvas;
+    public AudioMixerSnapshot paused, normal;
     bool isPaused = false;
     void Update()
     {
@@ -22,6 +24,7 @@ public class PauseMenu : MonoBehaviour
         pauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        paused.TransitionTo(0);
     }
 
     public void Resume()
@@ -30,6 +33,7 @@ public class PauseMenu : MonoBehaviour
         pauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        normal.TransitionTo(0);
     }
 
     public void Restart()

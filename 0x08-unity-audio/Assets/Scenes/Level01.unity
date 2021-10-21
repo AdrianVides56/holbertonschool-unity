@@ -20273,6 +20273,18 @@ PrefabInstance:
       propertyPath: yInverted
       value: 
       objectReference: {fileID: 930600323}
+    - target: {fileID: 163821355, guid: 57ad0f5e93320d943b6e7708bb649fa1, type: 3}
+      propertyPath: masterMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 64c443849651ed14bba16bd039613f42, type: 2}
+    - target: {fileID: 163821357, guid: 57ad0f5e93320d943b6e7708bb649fa1, type: 3}
+      propertyPath: normal
+      value: 
+      objectReference: {fileID: 24500006, guid: 64c443849651ed14bba16bd039613f42, type: 2}
+    - target: {fileID: 163821357, guid: 57ad0f5e93320d943b6e7708bb649fa1, type: 3}
+      propertyPath: paused
+      value: 
+      objectReference: {fileID: -7846130564262446664, guid: 64c443849651ed14bba16bd039613f42, type: 2}
     - target: {fileID: 163821357, guid: 57ad0f5e93320d943b6e7708bb649fa1, type: 3}
       propertyPath: pauseCanvas
       value: 
