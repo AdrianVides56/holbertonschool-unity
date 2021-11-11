@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e36cb43d84910d04786e1051980ecd0b
+guid: f151d8f1094acd740ac912dcf8aba89a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,7 +37,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -127,24 +127,26 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline:
-    - - {x: 861, y: 835}
-      - {x: 665, y: 854}
-      - {x: 18, y: 303}
-      - {x: -631, y: 857}
-      - {x: -812, y: 851}
-      - {x: -943, y: 713}
-      - {x: -943, y: -686}
-      - {x: -793, y: -844}
-      - {x: -605, y: -838}
-      - {x: -469, y: -685}
-      - {x: -473, y: 92}
-      - {x: 37, y: -332}
-      - {x: 507, y: 82}
-      - {x: 505, y: -685}
-      - {x: 668, y: -851}
-      - {x: 825, y: -851}
-      - {x: 988, y: -703}
-      - {x: 988, y: 695}
+    - - {x: -99, y: 234}
+      - {x: -160, y: 197}
+      - {x: -209, y: 148}
+      - {x: -245, y: 82}
+      - {x: -256, y: 0}
+      - {x: -251, y: -73}
+      - {x: -211, y: -158}
+      - {x: -161, y: -209}
+      - {x: -95, y: -247}
+      - {x: -6, y: -256}
+      - {x: 76, y: -256}
+      - {x: 153, y: -215}
+      - {x: 214, y: -151}
+      - {x: 244, y: -96}
+      - {x: 256, y: 5}
+      - {x: 247, y: 79}
+      - {x: 207, y: 150}
+      - {x: 143, y: 209}
+      - {x: 75, y: 243}
+      - {x: -6, y: 256}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -153,7 +155,11 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {instanceID: 0}
+      name: Highlight
+    - texture: {instanceID: 0}
+      name: Pressed
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
