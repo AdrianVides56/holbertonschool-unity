@@ -1,8 +1,11 @@
 {
     "name": "EditorMigrationScripts",
+    "rootNamespace": "",
     "references": [],
     "includePlatforms": [
-        "Editor"
+        "Android",
+        "Editor",
+        "iOS"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -10,5 +13,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }
