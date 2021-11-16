@@ -19,15 +19,20 @@ public class AnimationStateController : MonoBehaviour
         else
             animator.SetBool("isWalking", false);
 
-        if (inputMaster.Player.Jump.triggered)
+        if (player.GetComponent<PlayerController>().isGrounded)
+        {
+            if (inputMaster.Player.Jump.triggered)
                 animator.SetBool("isJumping", true);
+            else
+                animator.SetBool("isJumping", false);
+        }
         else
-            animator.SetBool("isJumping", false);
-        
-        if (player.transform.position.y < -15f && !player.GetComponent<PlayerController>().isGrounded)
-            animator.SetBool("isFalling", true);
-        else if (player.GetComponent<PlayerController>().isGrounded)
-            animator.SetBool("isFalling", false);
+        {
+            if (player.transform.position.y < -15f)
+                animator.SetBool("isFalling", true);
+            else
+                animator.SetBool("isFalling", false);
+        }
         
     }
 

@@ -9,13 +9,8 @@ public class AttachPlayer : MonoBehaviour
         if (other.gameObject == player)
         {
             player.transform.parent = transform;
-            Debug.Log("Attaching");
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        player.transform.parent = null;
-        Debug.Log("Se fue");
-    }
+    private void OnTriggerExit(Collider other) => player.transform.parent = null;
 }
