@@ -10,8 +10,18 @@
                     "type": "Value",
                     "id": "7da18ef3-4c7d-41e8-b332-0765bfb4b84d",
                     "expectedControlType": "Vector2",
+                    "processors": "NormalizeVector2",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "b1871eb2-fe25-4f61-a9bf-51616e4c109f",
+                    "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Jump",
@@ -19,7 +29,8 @@
                     "id": "3e1eb675-0426-4b03-a6f7-efb6e635c373",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Pause",
@@ -27,7 +38,8 @@
                     "id": "16198339-184d-4365-9da8-90b62e5a6471",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -88,9 +100,31 @@
                 },
                 {
                     "name": "",
+                    "id": "46ba15b7-848b-4f67-b8d1-96fb7e3b3d70",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "83b68b81-5579-40f4-ad05-48c18e9c4f8b",
                     "path": "<Keyboard>/space",
-                    "interactions": "Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73980dc1-6424-4fd0-b4cd-eef15f0a9c57",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
@@ -116,6 +150,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6dcc1b0c-db7c-4f59-99de-6cada9b26558",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f61737bb-246b-4dd8-afb1-dbd7e4d6ff6c",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
