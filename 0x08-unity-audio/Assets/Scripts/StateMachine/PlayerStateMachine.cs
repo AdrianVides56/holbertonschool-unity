@@ -12,7 +12,7 @@ public class PlayerStateMachine : MonoBehaviour
     public AudioSource footsteps;
     public AudioClip[] footstepsClips;
 
-    float turnSmoothVelocity, turnSmoothTime;
+    float turnSmoothVelocity, turnSmoothTime = 0.1f;
 
 
     // variable to store optimized setter/getter parameter IDs
@@ -30,17 +30,17 @@ public class PlayerStateMachine : MonoBehaviour
     bool isRunPressed;
 
     // Constants
-    public float rotationFactorPerFrame = 15.0f, runMultiplier = 6.0f;
-    float gravity = -9.81f, groundedGravity = -9.81f;
+    public float runMultiplier = 6.0f, gravity = -9.81f, groundedGravity = -9.81f;
 
     // Jumping Variables
     bool isJumpPressed = false;
     float initialJumpVelocity;
     float initialJumpPosition;
-    public float maxJumpHeight = 5f;
+    public float maxJumpHeight = 1.5f;
     public float maxJumpTime = 0.5f;
     bool isJumping = false;
     bool isJumpAnimating;
+    Vector3 velocity;
 
     // State Machine Variables
     PlayerBaseState currentState;
@@ -71,6 +71,7 @@ public class PlayerStateMachine : MonoBehaviour
     public int IsWalkingHash { get { return isWalkingHash; } }
     public int IsRunningHash { get { return isRunningHash; } }
     public int IsFallingHash { get { return isFallingHash; } }
+    public float VelocityY { get { return velocity.y; } set { velocity.y = value; } }
 
     void Awake()
     {
@@ -104,22 +105,15 @@ public class PlayerStateMachine : MonoBehaviour
     void setupJumpVariables()
     {
         float timeToApex = maxJumpTime / 2;
-        gravity = (-2 * maxJumpHeight) / (timeToApex * timeToApex);
+        //gravity = (-2 * maxJumpHeight) / (timeToApex * timeToApex);
         initialJumpVelocity = (2 * maxJumpHeight) / timeToApex;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        handleRotation();
+        HandleRotationAndMovement();
 
-        if (gameObject.transform.position.y < initialJumpPosition - 5)
+        if (gameObject.transform.position.y < initialJumpPosition - 20)
         {
             Animator.SetBool(isJumpingHash, false);
             Animator.SetBool(isFallingHash, true);
@@ -130,26 +124,25 @@ public class PlayerStateMachine : MonoBehaviour
         if (CharacterController.isGrounded)
             Animator.SetBool(isFallingHash, false);
 
+        velocity.y += groundedGravity * Time.deltaTime;
+        characterController.Move(velocity * Time.deltaTime);
         currentState.UpdateStates();
-
-        characterController.Move(appliedMovement * Time.deltaTime);
     }
 
-    void handleRotation()
+    // Rotates the player when moving
+    void HandleRotationAndMovement()
     {
-        Vector3 positionToLookAt;
-        // Where Character should point to
-        positionToLookAt.x = currentMovement.x;
-        positionToLookAt.y = 0.0f;
-        positionToLookAt.z = currentMovement.z;
-        // Current Rotation of the character
-        Quaternion currentRotation = transform.rotation;
-
         if (isMovementPressed)
         {
-            // Calculate the rotation based on when the player is currently pressing
-            Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
-            transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame * Time.deltaTime);
+            // Rotates the player to face the direction of movement
+            float targetAngle = Mathf.Atan2(appliedMovement.x, appliedMovement.z) * Mathf.Rad2Deg + mainCamera.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);        
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            // Moves the player in the direction of movement
+            //Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0) * new Vector3(0, 0, 5);
+            appliedMovement = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward * appliedMovement.magnitude;
+            characterController.Move(appliedMovement * Time.deltaTime);
         }
     }
 

@@ -13,7 +13,6 @@ public class PlayerJumpState : PlayerBaseState
     public override void EnterState()
     {
         HandleJump();
-        Ctx.InitialJumpPosition = Ctx.CharacterController.gameObject.transform.position.y;
     }
 
     public override void UpdateState()
@@ -54,6 +53,8 @@ public class PlayerJumpState : PlayerBaseState
         Ctx.IsJumping = true;
         Ctx.CurrentMovementY = Ctx.InitialJumpVelocity;
         Ctx.AppliedMovementY = Ctx.InitialJumpVelocity;
+
+        Ctx.VelocityY = Mathf.Sqrt(Ctx.maxJumpHeight * -2f * Ctx.Gravity);
     }
 
     void HandleGravity()

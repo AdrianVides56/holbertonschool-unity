@@ -3030,7 +3030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 0.7161472, z: -3.356356}
+  m_FollowOffset: {x: 0, y: 1.386532, z: -3.837557}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -7074,13 +7074,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529f1b20f5ea18a46b8eaa96fa65a51c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 930600324}
+  mainCamera: {fileID: 1565804774}
   footsteps: {fileID: 1849235008}
   footstepsClips:
   - {fileID: 8300000, guid: d731d04b6e416504b89d3ae824b2a83b, type: 3}
   - {fileID: 8300000, guid: 7137f558b89c7224fa5f21a625a2fab6, type: 3}
-  rotationFactorPerFrame: 15
   runMultiplier: 6
+  gravity: -73.575
+  groundedGravity: -73.575
   maxJumpHeight: 2.5
   maxJumpTime: 0.5
 --- !u!4 &815488501 stripped
@@ -7138,7 +7139,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -10305,7 +10306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 0.7161472, z: -3.356356}
+  m_FollowOffset: {x: 0, y: 1.386532, z: -3.837557}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -10765,7 +10766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 82a2914d8f86c62488456950c8330e38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10939,7 +10940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 0.7161472, z: -3.356356}
+  m_FollowOffset: {x: 0, y: 1.386532, z: -3.837557}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -18883,8 +18884,9 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   footsteps: {fileID: 0}
   footstepsClips: []
-  rotationFactorPerFrame: 15
   runMultiplier: 6
+  gravity: -9.81
+  groundedGravity: -9.81
   maxJumpHeight: 1
   maxJumpTime: 0.5
 --- !u!114 &1971768942

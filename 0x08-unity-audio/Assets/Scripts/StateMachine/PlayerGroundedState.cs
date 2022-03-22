@@ -17,10 +17,14 @@ public class PlayerGroundedState : PlayerBaseState
 
     public override void UpdateState()
     {
+        Ctx.VelocityY = -9.81f;
         CheckSwitchStates();
     }
 
-    public override void ExitState(){}
+    public override void ExitState()
+    {
+        Ctx.InitialJumpPosition = Ctx.CharacterController.transform.position.y;
+    }
 
     public override void InitializeSubState()
     {
