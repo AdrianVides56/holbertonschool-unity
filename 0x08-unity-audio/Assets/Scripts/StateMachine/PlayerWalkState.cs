@@ -8,14 +8,14 @@ public class PlayerWalkState : PlayerBaseState
         Ctx.Animator.SetBool(Ctx.IsWalkingHash, true);
         Ctx.Animator.SetBool(Ctx.IsRunningHash, false);
 
-        Ctx.Footsteps.pitch = 0.7f;
+        Ctx.Footsteps.pitch = 0.6f;
     }
 
     public override void UpdateState()
     {
         CheckSwitchStates();
-        Ctx.AppliedMovementX = Ctx.CurrentMovementInput.x * (Ctx.RunMultiplier / 2);
-        Ctx.AppliedMovementZ = Ctx.CurrentMovementInput.y * (Ctx.RunMultiplier / 2);
+        Ctx.AppliedMovementX = Ctx.CurrentMovementInput.x;
+        Ctx.AppliedMovementZ = Ctx.CurrentMovementInput.y;
 
         if (Ctx.Footsteps.isPlaying && Ctx.IsJumping)
             Ctx.Footsteps.Pause();

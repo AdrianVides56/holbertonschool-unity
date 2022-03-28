@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 1370011275907048121}
   - component: {fileID: 1370011275907048122}
   - component: {fileID: 353552609}
+  - component: {fileID: 353552614}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
@@ -191,6 +192,7 @@ RectTransform:
   - {fileID: 1370011275915953861}
   - {fileID: 1370011276222128533}
   - {fileID: 1370011277135501292}
+  - {fileID: 9026876643988894334}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -272,6 +274,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8519bcc9c98934289ba73ca3340848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &353552614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370011275907048123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a048c700e766ec46a23a19e88d02cbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollover: {fileID: 9026876644048703058}
+  click: {fileID: 9026876643907638647}
+  masterMixer: {fileID: 24100000, guid: 64c443849651ed14bba16bd039613f42, type: 2}
 --- !u!1 &1370011275915953862
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +301,7 @@ GameObject:
   - component: {fileID: 1370011275915953914}
   - component: {fileID: 1370011275915953915}
   - component: {fileID: 1370011275915953860}
+  - component: {fileID: 397786292}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -405,6 +423,47 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 353552614}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &397786292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370011275915953862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 353552614}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: ButtonRollover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1370011276116266795
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +551,7 @@ GameObject:
   - component: {fileID: 1370011276222128522}
   - component: {fileID: 1370011276222128523}
   - component: {fileID: 1370011276222128532}
+  - component: {fileID: 1613761133}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -613,6 +673,47 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 353552614}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1613761133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370011276222128534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 353552614}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: ButtonRollover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1370011276328940417
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,3 +967,75 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: YOU WIN!
+--- !u!1001 &5397036003963418629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1370011275907048127}
+    m_Modifications:
+    - target: {fileID: 4009320624332851834, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_Name
+      value: MenuSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 587
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 342
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+--- !u!4 &9026876643988894334 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4009320624332851835, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+  m_PrefabInstance: {fileID: 5397036003963418629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &9026876644048703058 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4009320624398841431, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+  m_PrefabInstance: {fileID: 5397036003963418629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &9026876643907638647 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4009320624254692722, guid: 321cec1920c939747997971dd3f9e309, type: 3}
+  m_PrefabInstance: {fileID: 5397036003963418629}
+  m_PrefabAsset: {fileID: 0}

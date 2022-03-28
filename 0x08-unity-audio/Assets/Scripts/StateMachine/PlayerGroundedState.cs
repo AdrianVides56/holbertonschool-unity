@@ -17,7 +17,8 @@ public class PlayerGroundedState : PlayerBaseState
 
     public override void UpdateState()
     {
-        Ctx.VelocityY = -9.81f;
+        if (Ctx.VelocityY < 0)
+            Ctx.VelocityY = Ctx.GroundedGravity;
         CheckSwitchStates();
     }
 

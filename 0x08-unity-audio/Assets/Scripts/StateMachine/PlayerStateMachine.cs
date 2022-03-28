@@ -14,7 +14,6 @@ public class PlayerStateMachine : MonoBehaviour
 
     float turnSmoothVelocity, turnSmoothTime = 0.1f;
 
-
     // variable to store optimized setter/getter parameter IDs
     int isWalkingHash;
     int isRunningHash;
@@ -105,13 +104,13 @@ public class PlayerStateMachine : MonoBehaviour
     void setupJumpVariables()
     {
         float timeToApex = maxJumpTime / 2;
-        //gravity = (-2 * maxJumpHeight) / (timeToApex * timeToApex);
         initialJumpVelocity = (2 * maxJumpHeight) / timeToApex;
     }
 
     void Update()
     {
         HandleRotationAndMovement();
+        currentState.UpdateStates();
 
         if (gameObject.transform.position.y < initialJumpPosition - 20)
         {
@@ -124,9 +123,6 @@ public class PlayerStateMachine : MonoBehaviour
         if (CharacterController.isGrounded)
             Animator.SetBool(isFallingHash, false);
 
-        velocity.y += groundedGravity * Time.deltaTime;
-        characterController.Move(velocity * Time.deltaTime);
-        currentState.UpdateStates();
     }
 
     // Rotates the player when moving
@@ -140,10 +136,13 @@ public class PlayerStateMachine : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             // Moves the player in the direction of movement
-            //Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0) * new Vector3(0, 0, 5);
             appliedMovement = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward * appliedMovement.magnitude;
             characterController.Move(appliedMovement * Time.deltaTime);
         }
+
+        // Applies gravity all time
+        velocity.y += gravity * Time.deltaTime;
+        characterController.Move(velocity * Time.deltaTime);
     }
 
     void OnJumpInput(InputAction.CallbackContext context)

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerJumpState : PlayerBaseState
 {
-    float initialJumpPosition;
     public PlayerJumpState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactory)
         : base(currentContext, playerStateFactory)
         {
@@ -54,7 +53,7 @@ public class PlayerJumpState : PlayerBaseState
         Ctx.CurrentMovementY = Ctx.InitialJumpVelocity;
         Ctx.AppliedMovementY = Ctx.InitialJumpVelocity;
 
-        Ctx.VelocityY = Mathf.Sqrt(Ctx.maxJumpHeight * -2f * Ctx.Gravity);
+        Ctx.VelocityY = Ctx.InitialJumpVelocity;
     }
 
     void HandleGravity()
