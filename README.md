@@ -35,11 +35,11 @@ This repository shows my first steps on `Game Development`, some of the progress
 | :-----: | :---------: |
 | [0x00-unity-user_interface](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x00-unity-user_interface) |  basics of Unity’s user interface. |
 | [0x01-unity_concepts](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x01-unity_concepts) | My first encounter with the game engine |
-| [0x04-unity_publishing](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x04-unity_publishing) | How to publish a game `(Small Maze Game)` |
-| [0x05-unity-assets_models_textures](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x05-unity-assets_models_textures) | Learning about textures and models `platformer v.D.1` |
-| [0x06-unity-assets_ui](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x06-unity-assets_ui) | Working with different UI elements `platformer v.D.2` |
-| [0x07-unity-animation](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x07-unity-animation) | How Animations work on the engine `platformer v.D.3` |
-| [0x08-unity-audio](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x08-unity-audio) | How to control Audio elements `plaformter v.P.1` |
+| [0x04-unity_publishing](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x04-unity_publishing) | How to publish a game. `Small Maze Game` |
+| [0x05-unity-assets_models_textures](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x05-unity-assets_models_textures) | Learning about textures and models. `platformer v.D.1` |
+| [0x06-unity-assets_ui](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x06-unity-assets_ui) | Working with different UI elements. `platformer v.D.2` |
+| [0x07-unity-animation](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x07-unity-animation) | How Animations work on the engine. `platformer v.D.3` |
+| [0x08-unity-audio](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x08-unity-audio) | How to control Audio elements. `plaformter v.P.1` |
 | [0x09-unity_ar_business_card](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x09-unity_ar_business_card) | AR development using `Vuforia` |
 | [0x0D-unity-shadergraph](https://github.com/AdrianVides56/holbertonschool-unity/tree/main/0x0D-unity-shadergraph) | Working with Shaders |
 
