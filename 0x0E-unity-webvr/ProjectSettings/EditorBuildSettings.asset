@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Distant Lands/Thalassophobia - Low Poly Oceans/Scenes/Coral Reef.unity
+    guid: 94757fd23e84f8c478af58f353a5b3c1
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a9fe1aed6696f4741937c495e903f843,
+      type: 2}
+    WebXR.Settings: {fileID: 11400000, guid: 0a412839c42f53d4bbd112eed6928618, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 174da56fa385aca4b931289023dc9aab,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: fa007cd9ff76b574db0202efa1a86d18,
+      type: 2}
